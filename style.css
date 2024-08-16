@@ -1,0 +1,109 @@
+]/* Basic reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Animated background */
+@keyframes backgroundAnimation {
+    0% { background-position: 0% 0%; }
+    50% { background-position: 100% 100%; }
+    100% { background-position: 0% 0%; }
+}
+
+body {
+    font-family: 'Arial', sans-serif;
+    background: linear-gradient(135deg, #2e2e2e, #333);
+    background-size: 400% 400%;
+    animation: backgroundAnimation 20s ease infinite;
+    color: #ddd;
+    line-height: 1.6;
+}
+
+/* Animation for header flying in */
+@keyframes flyInHeader {
+    from { opacity: 0; transform: translateY(-100px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+header {
+    background: rgba(50, 50, 50, 0.8);
+    color: #fff;
+    text-align: center;
+    padding: 30px;
+    border-bottom: 8px solid #555;
+    animation: flyInHeader 1s ease-out;
+}
+
+header h1 {
+    font-size: 2.8em;
+    margin-bottom: 10px;
+    font-weight: 600;
+}
+
+/* Animation for message box flying in */
+@keyframes flyInMessage {
+    from { opacity: 0; transform: translateY(100px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+main {
+    padding: 20px;
+    text-align: center;
+}
+
+.message {
+    background: rgba(50, 50, 50, 0.9);
+    border-radius: 15px;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.4);
+    padding: 25px;
+    max-width: 700px;
+    margin: 20px auto;
+    font-size: 1.2em;
+    color: #ddd;
+    animation: flyInMessage 1s ease-out;
+}
+
+/* Animation for text flying in */
+@keyframes flyInText {
+    from { opacity: 0; transform: translateX(-50px); }
+    to { opacity: 1; transform: translateX(0); }
+}
+
+.message h2, .message p {
+    animation: flyInText 1s ease-out;
+}
+
+.message h2 {
+    font-size: 2.2em;
+    margin-bottom: 15px;
+    color: #f4a261;
+}
+
+.message p {
+    margin-bottom: 20px;
+    line-height: 1.8;
+}
+
+/* Animation for footer flying in */
+@keyframes flyInFooter {
+    from { opacity: 0; transform: translateY(100px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+footer {
+    background: rgba(30, 30, 30, 0.8);
+    color: #aaa;
+    text-align: center;
+    padding: 15px;
+    position: fixed;
+    width: 100%;
+    bottom: 0;
+    border-top: 2px solid #444;
+    animation: flyInFooter 1s ease-out;
+}
+
+footer p {
+    font-size: 0.9em;
+}
